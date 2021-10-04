@@ -19,8 +19,11 @@ lt(90)
 bk(200)
 lt(90)
 
+t = True
+f = False
 
-with debug(False):
+
+with debug(t):
     korivelem(1,x,10)
 
 wait()

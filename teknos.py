@@ -65,7 +65,7 @@ def update():
 
 
 def wait():
-    input('nyomj egy entert hogy bezáródjon az ablak')
+    input('nyomj egy entert a folytatáshoz')
 
 def ht():
     turtle.ht()
@@ -76,10 +76,28 @@ class debug:
         self.d = b
 
     def __enter__(self):
-        if self.d:
+        if not self.d:
             tracer(0,0)
         return self
 
     def __exit__(self, exc_type, exc_val, exc_tb):
-        if self.d:
+        if not self.d:
             update()
+
+
+class tollat:
+    def __init__(self, hova):
+        self.le = hova
+
+    def __enter__(self):
+        if not self.le:
+            t.penup()
+        else:
+            t.pendown()
+        return self
+
+    def __exit__(self, exc_type, exc_val, exc_tb):
+        if not self.le:
+            t.pendown()
+        else:
+            t.penup()
