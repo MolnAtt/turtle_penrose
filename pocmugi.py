@@ -40,14 +40,13 @@ def felkorfele(i,kissugar,ro):
     
     rt(i*90)
     fd(kissugar)
-    lt(90)
-    t.circle(kissugar, extent = -i*90)
-    lt(90)
+
+    rt(i*90)
+    koriv(-i, kissugar, 90)
+    rt(i*90)
+
     with tollat(fel):
         fd(kissugar)
-    rt(i*90)
-    lt(i*90)
-    with tollat(fel):
         bk(ro)
 
 def trapezfele(i,trapsugar, traptav):
@@ -109,7 +108,11 @@ pencolor('white')
 pensize(1)
 
 lt(180)
-pocmugi(300)
+# pocmugi(500)
+
+otagucsillag(350, 50)
+#felkorfele(1,10,0)
+
 
 
 wait()
